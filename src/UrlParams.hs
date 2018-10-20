@@ -15,7 +15,7 @@ import Servant ( QueryParam
     , type (:<|>)
     , (:<|>)(..)
     )
-import Network.Wai.Handler.Warps
+import Network.Wai.Handler.Warp
 import Servant.Server(Handler,Server,Application,serve)
 import Control.Monad.IO.Class(liftIO)
 
