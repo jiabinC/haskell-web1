@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import UrlParams
 
 main :: IO ()
-main = someFunc
+main = mainFn
