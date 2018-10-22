@@ -44,9 +44,9 @@ myAuthCheck :: BasicAuthData -> IO (BasicAuthResult User)
 myAuthCheck (BasicAuthData u p) = return $ if u == "abin" && p == "123" then Authorized User else BadPassword
 
 app :: Application
-app = serveWithContext (Proxy :: Proxy ServantType) ctx server
+app = serveWithContext (Proxy :: Proxy AuthApi) ctx server
   where
     ctx = (BasicAuthCheck myAuthCheck) :. EmptyContext
 
-mainFn :: IO ()
-mainFn = run 4007 app
+mainFn4 :: IO ()
+mainFn4 = run 4007 app
