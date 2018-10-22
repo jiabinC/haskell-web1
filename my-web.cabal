@@ -28,6 +28,7 @@ library
   exposed-modules:
       Lib
       UrlParams
+      JsonOutput
   other-modules:
       Paths_my_web
   hs-source-dirs:
