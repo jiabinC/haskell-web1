@@ -37,7 +37,7 @@ server :: Server JSONType
 server = handlerPayload
 
 jsonType :: Proxy JSONType
-jsonType = proxy
+jsonType = Proxy
 
 app :: Application
 app = serve jsonType server
