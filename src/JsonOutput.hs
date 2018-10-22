@@ -6,7 +6,7 @@
 
 module JsonOutput where
 
-    import Servant ( QueryParam
+import Servant ( QueryParam
     , PlainText
     , Get
     , JSON
