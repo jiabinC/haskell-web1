@@ -18,6 +18,7 @@ import Servant ( QueryParam
     , type (:>)      -- Syntax for importing type operator
     , type (:<|>)
     , (:<|>)(..)
+    , MimeRender(..)
     )
 import Servant.Server (Handler, Server, Application, serveWithContext)
 import Network.Wai.Handler.Warp (run)
