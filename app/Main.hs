@@ -1,6 +1,9 @@
 module Main where
 
 import UrlParams
+import JsonOutput
 
 main :: IO ()
-main = mainFn
+main = do 
+        mainFn
+        mainFn1
