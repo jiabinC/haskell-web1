@@ -30,6 +30,7 @@ library
       UrlParams
       JsonOutput
       HtmlContent
+      HeaderInput
   other-modules:
       Paths_my_web
   hs-source-dirs:

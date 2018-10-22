@@ -5,6 +5,8 @@
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 
+module HtmlContent where
+
 import Servant ( QueryParam
                , PlainText
                , Get
@@ -30,7 +32,7 @@ instance MimeRender HTML String where
 instance MimeRender HTML Int where
     mimeRender _ val = C.pack $ show val
 
-type HTMLApi = "name" :> Get '[HTML] string
+type HTMLApi = "name" :> Get '[HTML] String
                 :<|> "age" :> Get '[HTML] Int
 
 htmlApi :: Proxy HTMLApi
