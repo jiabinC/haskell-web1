@@ -29,6 +29,7 @@ library
       Lib
       UrlParams
       JsonOutput
+      HtmlContent
   other-modules:
       Paths_my_web
   hs-source-dirs:
