@@ -32,7 +32,7 @@ handlerAge :: Handler Int
 handlerAge = return 20
 
 type AuthApi = BasicAuth "example auth" User :> "person" :>"name" :> Get '[PlainText] String
-             :<|> "person" :> "age" :> Get '[PlainText] String
+             :<|> "person" :> "age" :> Get '[PlainText] Int
 
 server :: Server AuthApi
 server = handlerName :<|> handlerAge
