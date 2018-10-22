@@ -11,7 +11,7 @@ import Servant ( QueryParam
     , PlainText
     , Get
     , Proxy(..)
-    , type (:>)      -- Syntax for importing type operator
+    , type (:>)       -- Syntax for importing type operator
     , type (:<|>)
     , (:<|>)(..)
     )

@@ -31,6 +31,7 @@ library
       JsonOutput
       HtmlContent
       HeaderInput
+      BasicAuth
   other-modules:
       Paths_my_web
   hs-source-dirs:
