@@ -25,21 +25,21 @@ import Network.Wai.Handler.Warp (run)
 import Control.Monad.IO.Class (liftIO)
 import Data.ByteString.Lazy.Char8 as C
 
-instance MimeRender PlainText Int where
-    mimeRender _ val = C.pack $ show val
-    
+-- instance MimeRender PlainText Int where
+--     mimeRender _ val = C.pack $ show val
+
 data User = User
 
 handlerName :: User -> Handler String
 handlerName user = return "abin"
 
-handlerAge :: Handler Int
-handlerAge = return 20
+handlerAge :: Handler String
+handlerAge = return "20"
 
 
 
 type AuthApi = BasicAuth "example auth" User :> "person" :>"name" :> Get '[PlainText] String
-             :<|> "person" :> "age" :> Get '[PlainText] Int
+             :<|> "person" :> "age" :> Get '[PlainText] String
 
 server :: Server AuthApi
 server = handlerName :<|> handlerAge
