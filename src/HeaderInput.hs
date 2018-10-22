@@ -31,7 +31,7 @@ server :: Server HeadApi
 server = handlerName
 
 app :: Application
-app = serve eadApi server
+app = serve headApi server
 
 mainFn3 :: IO ()
 mainFn3 = run 4003 app
