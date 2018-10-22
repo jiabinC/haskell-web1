@@ -12,13 +12,13 @@ import Servant ( QueryParam
     , BasicAuthCheck(..)
     , BasicAuthData(..)
     , BasicAuthResult(..)
+    , MimeRender(..)
     , Get
     , Context((:.), EmptyContext)
     , Proxy(..)
     , type (:>)      -- Syntax for importing type operator
     , type (:<|>)
     , (:<|>)(..)
-    , MimeRender(..)
     )
 import Servant.Server (Handler, Server, Application, serveWithContext)
 import Network.Wai.Handler.Warp (run)
