@@ -24,14 +24,16 @@ import Data.Aeson (object, ToJSON(..), (.=))
 data Payload = Payload String String
 
 instance ToJSON Payload where 
-    toJSON (Payload itemOne itemTwo) = object ["itemOne" .= toJSON itemOne, "itemTwo" .= toJSON itemTwo]
+  toJSON (Payload itemOne itemTwo) = object ["itemOne" .= toJSON itemOne, "itemTwo" .= toJSON itemTwo]
 
-HandlerPayload :: Handler Payload
-HandlerPayload = return $ Payload "itemOne" "itemTwo"
+
+
+handlerPayload :: Handler Payload
+handlerPayload = return $ Payload "itemOne" "itemTwo"
 
 type JSONType = GET '[JSON] Payload
 server :: Server JSONType
-server = HandlerPayload
+server = handlerPayload
 
 jsonType :: Proxy JSONType
 jsonType = proxy
