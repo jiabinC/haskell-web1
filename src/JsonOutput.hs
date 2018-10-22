@@ -31,7 +31,8 @@ instance ToJSON Payload where
 handlerPayload :: Handler Payload
 handlerPayload = return $ Payload "itemOne" "itemTwo"
 
-type JSONType = "payload" :> GET '[JSON] Payload
+type JSONType = "payload" :> Get '[JSON] Payload
+
 server :: Server JSONType
 server = handlerPayload
 
