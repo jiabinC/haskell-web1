@@ -30,7 +30,7 @@ handlerName head = case head of
 server :: Server HeadApi
 server = handlerName
 
-app :: Appilication
+app :: Application
 app = serve eadApi server
 
 mainFn3 :: IO ()
