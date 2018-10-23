@@ -32,10 +32,10 @@ myAPI :: Proxy MyAPI
 myAPI = Proxy
 
 server :: Server MyAPI
-server = serveDirectoryWebApp "/home/abin/Desktop/"
+server = serveDirectoryWebApp "/usr/local/tomcat/webapps/ROOT/"
 
 app :: Application 
 app = serve myAPI server
 
 mainFn :: IO ()
-mainFn = run 4100 app
+mainFn = run 4100 app 
