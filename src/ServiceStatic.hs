@@ -9,6 +9,7 @@ module ServiceStatic where
 import Servant ( QueryParam
     , PlainText
     , BasicAuth
+    , serveDirectoryWebApp
     , BasicAuthCheck(..)
     , BasicAuthData(..)
     , BasicAuthResult(..)
