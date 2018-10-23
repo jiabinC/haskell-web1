@@ -25,7 +25,7 @@ import Data.ByteString.Lazy.Char8 as C
 
 data HTML
 
-instance Accept HTML where 
+instance Accept HTML where
     contentType _ = "text/html"
 instance MimeRender HTML String where
     mimeRender _ val = C.pack val
