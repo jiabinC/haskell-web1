@@ -14,6 +14,7 @@ import Servant ( QueryParam
     , BasicAuthResult(..)
     , MimeRender(..)
     , Get
+    , Raw
     , Context((:.), EmptyContext)
     , Proxy(..)
     , type (:>)      -- Syntax for importing type operator
@@ -27,13 +28,13 @@ import Control.Monad.IO.Class (liftIO)
 type MyAPI = "static" :> Raw
 
 myAPI :: Proxy MyAPI
-myapi = Proxy
+myAPI = Proxy
 
 server :: Server MyAPI
 server = serveDirectoryWebApp "/home/abin/Desktop/"
 
 app :: Application 
-app = serve myapi server
+app = serve myAPI server
 
 mainFn :: IO ()
 mainFn = run 4100 app
